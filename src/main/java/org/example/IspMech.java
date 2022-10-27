@@ -1,16 +1,11 @@
 package org.example;
 
-import java.util.concurrent.CyclicBarrier;
-
 public class IspMech implements Runnable {
     private final int id;
     private final StatusStorage statusStorage;
-    CyclicBarrier cyclicBarrier;
-
-    public IspMech(int id, StatusStorage statusStorage, CyclicBarrier cyclicBarrier) {
+    public IspMech(int id, StatusStorage statusStorage) {
         this.id = id;
         this.statusStorage = statusStorage;
-        this.cyclicBarrier = cyclicBarrier;
     }
 
     @Override
